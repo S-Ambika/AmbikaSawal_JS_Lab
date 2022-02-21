@@ -36,45 +36,25 @@ Question.prototype.isCorrectAnswer = function(choice) {
 
 function showScores() {
     var quizElement = document.getElementById("quiz");
-
     var resPercentage = (quiz.score / questions.length) * 100;
-
+    var msg = '';
     if (quiz.score >= 5) {
-        var result = `<h1> Result </h1>
-          <h2 id='score'>Congratulations! <br><br>Your Scores : ${quiz.score} / ${questions.length} <br>Percentage : ${Math.round(resPercentage)}% </h2>
-          <br>
-          <h3 id='start'>Start Again</h3>`;
-        quizElement.innerHTML = result;
-        const start_over = document.getElementById('start');
-        start_over.onclick = () => {
-            location.reload();
-        };
-
+        msg = "Congratulations! <br><br>Your Scores : ";
     } else if (quiz.score < 5 && quiz.score > 2) {
-        var result = `<h1> Result </h1>
-          <h2 id='score'> Keep Learning , Good Luck! <br><br>Your Scores : ${quiz.score} / ${questions.length} <br>Percentage : ${Math.round(resPercentage)}% </h2>
-          <br>
-          <h3 id='start'>Start Again</h3>`;
-        quizElement.innerHTML = result;
-        const start_over = document.getElementById('start');
-        start_over.onclick = () => {
-            location.reload();
-        };
-
-
+        msg = "Keep Learning , Good Luck! <br><br>Your Scores : ";
     } else if (quiz.score <= 2) {
-        var result = `<h1> Result </h1>
-          <h2 id='score'>OOPs! Try again <br><br>Your Scores : ${quiz.score} / ${questions.length} <br>Percentage : ${Math.round(resPercentage)}% </h2>
-          <br>
-          <h3 id='start'>Start Again</h3>`;
-        quizElement.innerHTML = result;
-        const start_over = document.getElementById('start');
-        start_over.onclick = () => {
-            location.reload();
-        };
-
-
+        msg = "OOPs! Try again <br><br>Your Scores : ";
     }
+    var result = `<h1> Result </h1>
+    <h2 id='score'>${msg}${quiz.score} / ${questions.length} <br>Percentage : ${Math.round(resPercentage)}% </h2>
+    <br>
+    <h3 id='start'>Start Again</h3>`;
+    quizElement.innerHTML = result;
+    const start_over = document.getElementById('start');
+    start_over.onclick = () => {
+        location.reload();
+    };
+
 }
 
 function loadQuestions() {
