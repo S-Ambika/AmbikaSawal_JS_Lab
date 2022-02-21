@@ -1,0 +1,104 @@
+        html {
+            background: url(images/bcg2.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            overflow: hidden;
+        }
+        
+        body {
+            margin: 0 auto;
+            width: 100%;
+            vertical-align: middle;
+            top: 0px;
+        }
+        
+        .grid {
+            width: 600px;
+            height: 500px;
+            position: absolute;
+            margin: 0 auto;
+            top: 15%;
+            bottom: 15%;
+            float: right;
+            left: 50%;
+            background-color: #fff;
+            padding: 10px 50px 50px 50px;
+            border: 2px solid #cbcbcb;
+            box-shadow: 0px 4px 0px 4px rgb(146, 100, 13, 0.6);
+        }
+        
+        .grid h1 {
+            font-family: "sans-serif";
+            background-color: rgb(182, 120, 5);
+            font-size: 60px;
+            text-align: center;
+            color: #ffffff;
+            padding: 2px 0px;
+        }
+        
+        #score {
+            color: orange;
+            text-align: center;
+            font-size: 30px;
+        }
+        
+        .grid #question {
+            font-family: "monospace";
+            font-size: 30px;
+            color: orange;
+        }
+        
+        .buttons {
+            margin-top: 30px;
+        }
+        
+        #btn0,
+        #btn1,
+        #btn2,
+        #btn3 {
+            background-color: orange;
+            width: 250px;
+            font-size: 20px;
+            color: #fff;
+            border: 1px solid #1D3C6A;
+            margin: 10px 40px 10px 0px;
+            padding: 10px 10px;
+        }
+        
+        #btn0:hover,
+        #btn1:hover,
+        #btn2:hover,
+        #btn3:hover {
+            cursor: pointer;
+            background-color: rgb(146, 100, 13);
+        }
+        
+        #btn0:focus,
+        #btn1:focus,
+        #btn2:focus,
+        #btn3:focus {
+            outline: 0;
+        }
+        
+        #progress {
+            color: orange;
+            font-size: 18px;
+        }
+        
+        #start {
+            background-color: rgb(122, 81, 6);
+            color: white;
+            align-items: center;
+            text-align: center;
+            float: right;
+            padding: 10px;
+            width: 150px;
+            align-self: center;
+            justify-content: center;
+        }
+        
+        #start:hover {
+            cursor: pointer;
+        }
